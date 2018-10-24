@@ -1,7 +1,7 @@
 # README #
 
-This is an exercise implementation for an Assessment.
-This provide a API endpoint that accepts a country code (limited to UK and US for simplicity) and returns the latest twitter trends for that location, along with the top 10 tweets for that twitter trend.
+This is an example exercising the use of Spring Boot and Spring Social Twitter project.
+It provides an API endpoint that accepts a country code (limited to UK and US for simplicity) and returns the latest twitter trends for that location, along with the top 10 tweets for that twitter trend.
 
 ### Requirements ###
 
