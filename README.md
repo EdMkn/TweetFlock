@@ -107,23 +107,3 @@ curl -X GET -H 'Content-Type: application/json' -i 'http://127.0.0.1:8080/api/tw
 ```
 
 The only supported contry codes are `US` and `UK`, any other else will return `HTTP 400`.
-
-### Solution Decisions ###
-
-* The instructions is not clear about .csv files, when should be created, where, name pattern, possible performance issues. Was decided create it with `<search tag>_<timestamp>.csv` at request.
-
-* To avoid performance issues with multiple requests writing new files was added a cache by default configured for 60 minutes, this will retrieve updated values every 60 minutes, therefore, write new csv files with updated timestamp.
-
-* Was not defined a policy to manage csv files, this will indefinately create new files, in a real scenario should be managed by a cron or a job in the application itself.
-
-* Was not defined a contract for json response, only for csv file, I decided to return all fields in rest api, in a real scenario this should be discussed with business to check actual requirements in order to save resources.
-
-* Was prioritised return the results to the client even if faced any issue with csv file, this is another business logic that should be discussed.
-
-### What is missing and improvements ###
-
-* Add swagger for rest documentation
-
-* More tests exploring thread concurrency, its working as a POC but the csv file writing should be more explored based on business logic.
-
-* Explore more test cases, few were added covering the main scenarios.
