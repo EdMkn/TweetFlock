@@ -89,12 +89,8 @@ com.volmar/tweetflock        latest              b59a9ec0130c        18 minutes 
 The script runs the container with the application as a daemon, if you want run attached to terminal, check debug logs you can run manually
 
 ```
-docker run --name=api -v ~/api_csv:/data -p 8080:8080 com.volmar/tweetflock
+docker run --name=api -p 8080:8080 com.volmar/tweetflock
 ```
-
-`-v` attribute is defining that will be created a folder called `api_csv` at your home folder, this where application will create the csv files, feel free to change, however `/data` can't be changed, application is pointing directly to this path.
-
-If you are not familiar with docker, just copy, paste and trust me :)
 
 You should get application available at:
 
