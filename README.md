@@ -1,3 +1,6 @@
+Docker pas encore operationnelle
+Lancer juste le main en débug
+curl -X GET -H 'Content-Type: application/json' -i 'http://127.0.0.1:8080/api/tweetflock/us'
 # README #
 
 This is an example exercising the use of Spring Boot and Spring Social Twitter project.
